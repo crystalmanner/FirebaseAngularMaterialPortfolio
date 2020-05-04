@@ -1,0 +1,113 @@
+h2,
+.h2 {
+  color: #1d4354;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+}
+h5,
+.h5 {
+  color: #222;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#hero-section {
+  background-image: url("/assets/img/bg/bg-3.jpg");
+  background-position: top;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  height: 538px;
+  .team-stacks {
+    display: flex;
+    justify-content: space-between;
+    .stack-item {
+      color: white;
+    }
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.item-carousel {
+  background-color: transparent;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  width: 15vw !important;
+  min-width: 200px;
+  height: 25vh !important;
+  top: 0vh;
+  border: none !important;
+  cursor: pointer;
+
+  .card {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+  }
+}
+
+#members {
+  .container {
+    position: relative;
+    top: -80px;
+    .prev-step {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+    }
+    .next-step {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+    }
+  }
+}
+
+#hire {
+  margin: 30px 0;
+  .hire-type {
+    i {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 20px;
+      color: #e6a01e;
+    }
+  }
+}
+#get-talent {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .row {
+      margin-bottom: 80px;
+    }
+    .colored-dash {
+      width: 50px;
+      height: 7px;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .red {
+      background-color: #f3756c;
+    }
+    .yellow {
+      background-color: #e6a01e;
+    }
+  }
+}
+
+#skill-sets {
+  margin-bottom: 1.5rem;
+  .skill-item {
+    margin-bottom: 10px;
+    color: #222;
+  }
+  .browse-link {
+    color: #37a000;
+  }
+}

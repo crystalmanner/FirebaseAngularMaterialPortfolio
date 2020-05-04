@@ -1,0 +1,8 @@
+<div class="dropzone" jpsDropzone (hovered)="toggleHover($event)" (dropped)="onDrop($event)"
+  [class.hovering]="isHovering">
+  <button mat-raised-button>Browse</button>
+  <span>Drag and Drop a File</span>
+</div>
+<div *ngFor="let file of files">
+  <jps-upload-task [file]="file"></jps-upload-task>
+</div>

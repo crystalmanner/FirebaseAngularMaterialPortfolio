@@ -1,0 +1,128 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="d-flex align-items-center justify-content-between filter-by">
+          <h3>Filter By</h3>
+          <button mat-icon-button mat-raised-button>
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+        <div class="filter-block">
+          <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Category
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-body">
+              <mat-checkbox [(ngModel)]="allCategory">All Categories</mat-checkbox>
+              <mat-checkbox *ngFor="let cat of categories">
+                {{cat.name}}
+              </mat-checkbox>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Talent type
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-body">
+              <div class="panel-body">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]='talentType'>
+                  <mat-radio-button [value]="0">All</mat-radio-button>
+                  <mat-radio-button *ngFor="let talent of talentTypes" [value]="talent.code">
+                    {{talent.name}}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Hourly Rate
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-body">
+              <mat-radio-group aria-label="Select an option" [(ngModel)]='hourlyRate'>
+                <mat-radio-button [value]="0">All</mat-radio-button>
+                <mat-radio-button *ngFor="let item of hourlyRates" [value]="item.code">
+                  {{item.name}}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                English level
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-body">
+              <mat-radio-group aria-label="Select an option" [(ngModel)]='englishLevel'>
+                <mat-radio-button [value]="0">All</mat-radio-button>
+                <mat-radio-button *ngFor="let item of englishLevels" [value]="item.code">
+                  {{item.name}}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </mat-expansion-panel>
+        </div>
+
+      </div>
+      <div class="col-9">
+        <div class="card remove-card-transition">
+          <div class="search-container">
+            <mat-form-field>
+              <input matInput type="text" placeholder="Search" [(ngModel)]="searchValue">
+              <button mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear"
+                (click)="searchValue=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="search-btn">
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
+          <div class="talents">
+            <div class="talent" *ngFor="let item of talents; let i=index" [routerLink]="['/portfolio/'+i]">
+              <div class="talent-header">
+                <img [src]="item.img" [alt]="item.name" />
+                <div>
+                  <div class="talent-name">
+                    {{item.name}}
+                  </div>
+                  <div class="talent-title">
+                    {{item.title}}
+                  </div>
+                </div>
+                <button mat-icon-button mat-raised-button class="mr-2" [routerLink]="[i+'/edit']">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button mat-raised-button color="warn">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+              <div class="talent-cat">
+                <div class="talent-email">{{item.reviews}}</div>
+                <div class="talent-hourly"><strong>${{item.hourly}}</strong> / hr</div>
+                <div class="talent-address">{{item.address}}</div>
+              </div>
+              <div class="talent-summary">
+                {{item.summary}}
+              </div>
+              <div class="talent-skills">
+                <div class="talent-skill" *ngFor="let skill of item.skills">
+                  {{skill}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

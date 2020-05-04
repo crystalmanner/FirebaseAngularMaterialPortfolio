@@ -1,0 +1,60 @@
+<h3 class="mb-4">Edit <strong>Some About my Ability</strong> Section</h3>
+<form name="form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-5">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="someAbilitiesTitle">
+        <mat-error>
+          Title is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Content</mat-label>
+        <textarea matInput formControlName="someAbilitiesContent" rows="10"
+          placeholder="I am a Full stack developer"></textarea>
+        <mat-error>
+          Content is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-7">
+      <button mat-button class="d-block" (click)="addSkill()">Add new skill</button>
+      <div formArrayName="skills" *ngFor="let item of form.controls.skills.controls; let i=index;">
+        <div class="row" [formGroupName]="i">
+          <div class="col-4">
+            <mat-form-field appearance="outline" class="d-block">
+              <mat-label>Skill Name</mat-label>
+              <input matInput formControlName="skill">
+              <mat-error>
+                Skill name is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline" class="d-block">
+              <mat-label>Start Year</mat-label>
+              <input matInput formControlName="startYear">
+              <mat-error>
+                Start year is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline" class="d-block">
+              <mat-label>Level</mat-label>
+              <input matInput formControlName="rate">
+              <mat-error>
+                Skill level is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button mat-raised-button color="primary" class="mr-4" [disabled]="form.invalid">Update</button>
+    <button mat-raised-button color="primary">Cancel</button>
+  </div>
+</form>

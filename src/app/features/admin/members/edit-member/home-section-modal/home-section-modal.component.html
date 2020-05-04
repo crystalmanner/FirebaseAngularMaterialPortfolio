@@ -1,0 +1,46 @@
+<h3 class="mb-4">Edit <strong>Home</strong> Section</h3>
+<div class="row">
+  <div class="col-6">
+    <h5>Background Image</h5>
+    <div class="d-flex align-items-center justify-content-center mb-4">
+      <img src="//www.gravatar.com/avatar/4e97ab1a0700e2d19f1e54c74e5a04d8?s=200&r=pg&d=mm" alt="" class="bg-img" />
+    </div>
+    <jps-uploader></jps-uploader>
+  </div>
+  <div class="col-6">
+    <h5>Information</h5>
+    <form name="form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName">
+        <mat-error *ngIf="form.get('fullName').hasError('required')">
+          Full name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Birthday</mat-label>
+        <input matInput type="date" formControlName="birthday" />
+        <mat-error>
+          Content is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Summary Title</mat-label>
+        <input matInput formControlName="developerType" placeholder="I am a Full stack developer">
+        <mat-error>
+          Summary title is required
+        </mat-error>
+      </mat-form-field>
+      <div class="d-flex justify-content-between">
+        <mat-checkbox formControlName="published">Published</mat-checkbox>
+        <mat-checkbox formControlName="firstPage">Show at First Page</mat-checkbox>
+      </div>
+      <input type="hidden" formControlName="avatar">
+      <input type="hidden" formControlName="bgImg">
+      <div class="d-flex justify-content-end">
+        <button mat-raised-button color="primary" class="mr-4" [disabled]="form.invalid">Update</button>
+        <button mat-raised-button color="primary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

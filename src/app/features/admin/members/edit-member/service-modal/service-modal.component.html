@@ -1,0 +1,33 @@
+<h3 class="mb-5">{{modalType}} <strong>Service</strong></h3>
+<div class="row">
+  <div class="col-5">
+    <h5>Logo Image</h5>
+    <div class="d-flex align-items-center justify-content-center mb-4">
+      <img src="//www.gravatar.com/avatar/4e97ab1a0700e2d19f1e54c74e5a04d8?s=200&r=pg&d=mm" alt="" class="bg-img" />
+    </div>
+  </div>
+  <div class="col-7">
+    <h5>Information</h5>
+    <form name="form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="d-block mb-3">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+        <mat-error>
+          Title is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Content</mat-label>
+        <textarea matInput rows="8" formControlName="content"></textarea>
+        <mat-error>
+          Content is required
+        </mat-error>
+      </mat-form-field>
+      <input type="hidden" formControlName="logoUrl">
+      <div class="d-flex justify-content-end">
+        <button mat-raised-button color="primary" class="mr-4" [disabled]="form.invalid">Update</button>
+        <button mat-raised-button color="primary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

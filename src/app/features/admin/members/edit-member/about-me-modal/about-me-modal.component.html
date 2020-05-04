@@ -1,0 +1,123 @@
+<h3 class="mb-5">Edit <strong>About Me</strong> Section</h3>
+<form name="form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-4">
+      <div class="d-flex align-items-center justify-content-center mb-4">
+        <img src="//www.gravatar.com/avatar/4e97ab1a0700e2d19f1e54c74e5a04d8?s=200&r=pg&d=mm" alt="" class="bg-img" />
+      </div>
+      <button mat-flat-button class="d-block">Upload CV</button>
+    </div>
+    <div class="col-8">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+        <mat-error>
+          Title is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Profile Content</mat-label>
+        <textarea matInput formControlName="content" rows="6" placeholder="I am a Full stack developer"></textarea>
+        <mat-error>
+          Content is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" />
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" />
+        <mat-error>
+          City is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country" />
+        <mat-error>
+          Country is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <mat-form-field appearance="outline" class="d-block">
+    <mat-label>Interests</mat-label>
+    <input matInput formControlName="interests" />
+  </mat-form-field>
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Study(Education)</mat-label>
+        <input matInput formControlName="study" />
+        <mat-error>
+          Study is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Degree</mat-label>
+        <input matInput formControlName="degree" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="content" />
+        <mat-error>
+          Email is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" />
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>websiteUrl</mat-label>
+        <input matInput formControlName="websiteUrl" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Linkedin Url</mat-label>
+        <input matInput formControlName="linkedinUrl" />
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Facebook Url</mat-label>
+        <input matInput formControlName="linkedinUrl" />
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Twitter Url</mat-label>
+        <input matInput formControlName="linkedinUrl" />
+      </mat-form-field>
+    </div>
+  </div>
+  <input type="hidden" formControlName="cvUrl">
+  <input type="hidden" formControlName="aboutMeImgUrl">
+  <div class="d-flex justify-content-end">
+    <button mat-raised-button color="primary" class="mr-4" [disabled]="form.invalid">Update</button>
+    <button mat-raised-button color="primary">Cancel</button>
+  </div>
+</form>

@@ -1,0 +1,78 @@
+<h3 class="mb-5">{{modalType}} <strong>Project</strong></h3>
+<form name="form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-4">
+      <div class="d-flex align-items-center justify-content-center mb-4">
+        <img src="//www.gravatar.com/avatar/4e97ab1a0700e2d19f1e54c74e5a04d8?s=200&r=pg&d=mm" alt="" class="bg-img" />
+      </div>
+    </div>
+    <div class="col-8">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+        <mat-error>
+          Title is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Project Content</mat-label>
+        <textarea matInput formControlName="content" rows="6" placeholder="I am a Full stack developer"></textarea>
+        <mat-error>
+          Content is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Start Date</mat-label>
+        <input matInput type="date" formControlName="startDate" />
+        <mat-error>
+          Start date is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>End Date</mat-label>
+        <input matInput type="date" formControlName="endedDate" />
+        <mat-error>
+          End date is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Live URL</mat-label>
+        <input matInput formControlName="refUrl" />
+      </mat-form-field>
+    </div>
+  </div>
+  <mat-form-field appearance="outline" class="d-block">
+    <mat-label>Skills</mat-label>
+    <input matInput formControlName="skills" />
+  </mat-form-field>
+  <div class="row">
+    <div class="col-4">
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Difficulty</mat-label>
+        <input matInput formControlName="difficulty" />
+        <mat-error>
+          Difficulty is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-4">
+      <mat-checkbox formControlName="published">Published</mat-checkbox>
+    </div>
+    <div class="col-4">
+      <mat-checkbox formControlName="firstPage">Show at First Page</mat-checkbox>
+    </div>
+  </div>
+  <input type="hidden" formControlName="projectImgs">
+  <div class="d-flex justify-content-end">
+    <button mat-raised-button color="primary" class="mr-4" [disabled]="form.invalid">Update</button>
+    <button mat-raised-button color="primary">Cancel</button>
+  </div>
+</form>

@@ -1,0 +1,170 @@
+<section id="hero-section" class="d-flex align-items-center">
+  <div class="container ">
+    <div>
+      <h2 class="text-white">Provide only Perfect Result</h2>
+      <h2 class="mb-5 text-warning">All member are expert in Web Applications Development</h2>
+      <div class="mb-5">
+        <button mat-raised-button color="primary" class="mr-3">Get Start with Us</button>
+        <button mat-raised-button color="accent">About More</button>
+      </div>
+      <div class="team-stacks">
+        <div class="stack-item"><img src="assets/img/icons/microsoft.svg" alt="" /></div>
+        <div class="stack-item"><img src="assets/img/icons/airbnb.svg" alt="" /></div>
+        <div class="stack-item"><img src="assets/img/icons/ge.svg" alt="" /></div>
+        <div class="stack-item"><img src="assets/img/icons/automatic.svg" alt="" /></div>
+        <div class="stack-item"><img src="assets/img/icons/bissell.svg" alt="" /></div>
+        <div class="stack-item"><img src="assets/img/icons/netflix.svg" alt="" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="members">
+  <div class="container">
+    <carousel-component #membersCarousel [morePairSlides]="moreSlides" [angle]="degree" [initialSlide]="initSlide">
+      <div class="item-carousel" *ngFor="let item of talentMembers; let i=index" [routerLink]="['/portfolio/'+i]">
+        <div class="card">
+          <div>
+            <img [src]="item.img" [alt]="item.name" />
+            <div class="talent-name">{{item.name}}</div>
+            <div class="talent-name">{{item.title}}</div>
+            <div class="talent-name">{{item.address}}</div>
+            <div class="talent-name">{{item.rate}}</div>
+            <div class="talent-name">{{item.reviews}} REVIEWS</div>
+          </div>
+        </div>
+      </div>
+    </carousel-component>
+    <div class="prev-step cursor-pointer" (click)="prevMember()">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </div>
+    <div class="next-step cursor-pointer" (click)="nextMember()">
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </div>
+  </div>
+</section>
+
+<section id="hire">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="hire-type h2">
+          <i class="far fa-thumbs-up"></i>
+          Complex Projects
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="hire-type h2">
+          <i class="far fa-thumbs-up"></i>
+          Long-term contracts</div>
+      </div>
+      <div class="col-4">
+        <div class="hire-type h2">
+          <i class="far fa-thumbs-up"></i>
+          Short-term jobs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="get-talent">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <h2>
+          <span class="colored-dash red"></span>
+          Get proven talent
+        </h2>
+        <p data-qa="text" class="lead-intro"> Connect with in-demand, independent professionals and specialized
+          agencies—and
+          see
+          why businesses give Upwork talent a 4.8 out of 5 rating based on 1M+ reviews.
+        </p>
+        <a>Explore the talent on Upwork </a>
+      </div>
+      <div class="col-6 d-flex justify-content-center">
+        <img src="assets/img/icons/proven-talent.svg">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-center">
+        <img src="assets/img/icons/airplanes.svg">
+      </div>
+      <div class="col-6">
+        <h2>
+          <span class="colored-dash yellow"></span>
+          Get proven talent
+        </h2>
+        <p data-qa="text" class="lead-intro"> Connect with in-demand, independent professionals and specialized
+          agencies—and see
+          why businesses give Upwork talent a 4.8 out of 5 rating based on 1M+ reviews.
+        </p>
+        <a>Explore the talent on Upwork </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h2>
+          <span class="colored-dash red"></span>
+          Get proven talent
+        </h2>
+        <p data-qa="text" class="lead-intro"> Connect with in-demand, independent professionals and specialized
+          agencies—and
+          see
+          why businesses give Upwork talent a 4.8 out of 5 rating based on 1M+ reviews.
+        </p>
+        <a>Explore the talent on Upwork </a>
+      </div>
+      <div class="col-6 d-flex justify-content-center">
+        <img src="assets/img/icons/specialized-profile.svg">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-center">
+        <img src="assets/img/icons/agencies.svg">
+      </div>
+      <div class="col-6">
+        <h2>
+          <span class="colored-dash yellow"></span>
+          Get proven talent
+        </h2>
+        <p data-qa="text" class="lead-intro"> Connect with in-demand, independent professionals and specialized
+          agencies—and
+          see
+          why businesses give Upwork talent a 4.8 out of 5 rating based on 1M+ reviews.
+        </p>
+        <a>Explore the talent on Upwork </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>
+      <span class="colored-dash red"></span>
+      Here’s how Upwork helps deliver the best match
+    </h2>
+  </div>
+</section>
+<section id="skill-sets">
+  <div class="container">
+    <h5>Top Skills</h5>
+    <div class="row mb-5">
+      <div class="col-3" *ngFor="let item of topSkills">
+        <a class="skill-item">
+          {{item}}
+        </a>
+      </div>
+    </div>
+    <h5>Trending Skills</h5>
+    <div class="row mb-4">
+      <div class="col-3" *ngFor="let item of trendingSkills">
+        <a class="skill-item">
+          {{item}}
+        </a>
+      </div>
+    </div>
+    <a [routerLink]="['/']" class="browse-link mb-4"><span>Browse All Skills</span></a>
+  </div>
+</section>

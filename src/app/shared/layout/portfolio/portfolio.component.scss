@@ -1,0 +1,35 @@
+mat-drawer {
+  border-right: none;
+  position: fixed;
+}
+.portfolio-container {
+  .portfolio-content {
+    min-height: 100vh;
+    position: relative;
+    overflow: unset;
+    .content {
+      padding-bottom: 120px;
+    }
+    jps-pf-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      bottom: 200px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-color: #E3872D;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mat-icon {
+        // width: 15px;
+      }
+    }
+  }
+}

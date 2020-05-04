@@ -1,0 +1,251 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900,400italic");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul {
+  margin: 0px;
+  list-style-type: none;
+}
+h1,
+.h1 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 64px;
+}
+h2,
+.h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+h3,
+.h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+h4,
+.h4 {
+  font-size: 22px;
+  line-height: 24px;
+}
+h5,
+.h5 {
+  font-size: 18px;
+  line-height: 27px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    color: #e3872d !important;
+    text-decoration: none;
+  }
+}
+.activeLink {
+  color: rgb(255, 128, 0);
+}
+
+.container {
+  max-width: 1250px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  padding: 0px 40px;
+  position: relative;
+  clear: both;
+  box-sizing: border-box;
+}
+.clearfix {
+  clear: both;
+}
+.title-holder {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding-bottom: 100px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 72px;
+    background-color: #e3872d;
+    top: 2px;
+  }
+
+  h3 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    padding-left: 25px;
+    margin: 0;
+  }
+  span {
+    padding-left: 25px;
+  }
+}
+.mini-title-holder {
+  position: relative;
+  h4 {
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+}
+button {
+  &:focus {
+    outline: none;
+  }
+}
+.btn-animation {
+  text-decoration: none;
+  color: #fff;
+  background-color: #e3872d;
+  font-weight: 600;
+  font-family: "Montserrat";
+  padding: 12px 35px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  span {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &:hover {
+    color: white;
+    &::before {
+      width: 170%;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    height: 100%;
+    left: -25%;
+    width: 0%;
+    background-color: #041230;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    z-index: 1;
+  }
+}
+
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 40px 33px 40px;
+  top: 0;
+  &:hover {
+    top: -5px;
+  }
+  transition: all 0.3s ease;
+  .card-icon {
+    font-size: 2rem;
+    color: #e3872d;
+    margin-bottom: 21px;
+  }
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1;
+  }
+}
+.remove-card-transition {
+  &:hover {
+    top: 0 !important;
+  }
+}
+carousel-component {
+  .container {
+    left: -35px;
+  }
+}
+
+.common-body {
+  min-height: 100vh;
+  position: relative;
+  overflow: unset;
+  background-color: #f2f2f2;
+  .content {
+    padding-bottom: 120px;
+    padding-top: 64px;
+    min-height: 100vh;
+  }
+  jps-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.separator {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: gray;
+    top: 50%;
+    right: 0;
+    width: calc(50% - 30px);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: gray;
+    top: 50%;
+    left: 0;
+    width: calc(50% - 30px);
+  }
+  .text {
+    font-size: small;
+  }
+}
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dashed #f16624;
+  border-radius: 5px;
+  background: white;
+  margin: 10px 0;
+  padding: 20px;
+
+  &.hovering {
+    border: 2px solid #f16624;
+    color: #dadada !important;
+  }
+
+  .file-label {
+    font-size: 1.2em;
+  }
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}

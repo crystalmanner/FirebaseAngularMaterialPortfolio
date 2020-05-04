@@ -1,0 +1,276 @@
+<div class="section" id="portfolio-home">
+  <div class="hero-header-wrap">
+    <div class="particle-overlay">
+      <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+    </div>
+    <div class="inner-content">
+      <div class="image-wrap">
+        <img src="assets/img/img.jpg" alt="">
+      </div>
+      <div class="name-holder">
+        <h3>Alan <span>Michaelis</span></h3>
+      </div>
+      <div class="text-typing">
+        <p>I'm a <span class="animation-text-word">Full Stack Developer</span><span class="typed-cursor"></span></p>
+      </div>
+      <jps-icon-button (click)="openHomeSectionModal()"></jps-icon-button>
+    </div>
+    <div class="arrow-wrap bounce anchor">
+      <a href="#about"><i class="xcon-angle-double-down"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ABOUT -->
+<div class="section" id="portfolio-about">
+  <div class="container">
+    <div class="title-holder">
+      <h3>About Me</h3>
+      <span>Main informations about me</span>
+      <jps-icon-button (click)="openAboutMeEditModal()"></jps-icon-button>
+    </div>
+    <div class="about-wrap">
+      <div class="leftbox">
+        <img src="assets/img/1.jpg" alt="">
+      </div>
+      <div class="rightbox">
+        <div class="mini-title-holder">
+          <h4>I'm Alan Michaelis and <span class="animation-text-word">Freelancer</span><span
+              class="typed-cursor"></span></h4>
+        </div>
+        <div class="definition">
+          <p>Hi! My name is <strong>Alan Michaelis</strong>. I am a Web Developer, and I'm very passionate and
+            dedicated to my work. With 20 years experience as a professional Web developer, I have acquired the
+            skills and knowledge necessary to make your project a success. I enjoy every step of the design
+            process, from discussion and collaboration to concept and execution, but I find the most satisfaction
+            in seeing the finished product do everything for you that it was created to do.</p>
+        </div>
+        <div class="about-short-contact-wrap">
+          <ul>
+            <li>
+              <span><label>Birthday:</label> 01.07.1990</span>
+            </li>
+            <li>
+              <span><label>Age:</label> 28</span>
+            </li>
+            <div class="clearfix"></div>
+            <li>
+              <span><label>City:</label> New York, USA</span>
+            </li>
+            <li>
+              <span><label>Interests:</label> Soccer, UFC</span>
+            </li>
+            <div class="clearfix"></div>
+            <li>
+              <span><label>Study:</label> Chicago University</span>
+            </li>
+            <li>
+              <span><label>Degree:</label> Master</span>
+            </li>
+            <div class="clearfix"></div>
+            <li>
+              <span><label>Website:</label> <a href="#">www.mywebsite.com</a></span>
+            </li>
+            <li>
+              <span><label>Mail:</label> <a href="mailto:example@gmail.com">mymail@gmail.com</a></span>
+            </li>
+            <div class="clearfix"></div>
+            <li>
+              <span><label>Phone:</label> <a href="#">+77 022 177 05 05</a></span>
+            </li>
+            <li>
+              <span><label>Twitter:</label> <a href="#">@myusername</a></span>
+            </li>
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <div class="buttons-wrap">
+          <div class="btn-animation"><span>Download CV</span></div>
+          <div class="btn-animation"><span>Send Message</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ABOUT -->
+
+
+<!-- SKILLS -->
+<div class="section" id="portfolio-skills">
+  <div class="container">
+    <div class="inner-wrap">
+      <div class="leftbox">
+        <div class="mini-title-holder">
+          <h4>Some About my Abilities</h4>
+          <jps-icon-button (click)="openEditAbilitiesModal()"></jps-icon-button>
+        </div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the
+          industry's standard dummy text since. Lorem Ipsum is simply.</p>
+      </div>
+      <div class="rightbox">
+        <div class="skill-progress" *ngFor="let item of skills">
+          <div class="skill-summary">
+            <span class="label">
+              {{item.skill}} - <span class="experience"> {{item.years}} years of experience</span>
+            </span>
+            <span class="number">{{item.level}}%</span>
+          </div>
+          <mat-progress-bar mode="determinate" [value]="item.level"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /SKILLS -->
+
+
+<!-- SERVICES -->
+<div class="section" id="portfolio-services">
+  <div class="container">
+    <div class="title-holder">
+      <h3>Amazing Services</h3>
+      <span>Main our amazing services</span>
+      <jps-icon-button icon="add" (click)="addNewService()"></jps-icon-button>
+    </div>
+    <div class="row services-wrap">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-drafting-compass"></i></div>
+          <div class="card-title">Web Design</div>
+          <div class="card-content">
+            <p>
+              Web design is a similar process of creation, with the intention of presenting the content on electronic
+              pages ...
+            </p>
+          </div>
+          <jps-icon-button icon="edit" offset="50" (click)="editService()"></jps-icon-button>
+          <jps-icon-button icon="delete" (click)="deleteService()"></jps-icon-button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-drafting-compass"></i></div>
+          <div class="card-title">Web Design</div>
+          <div class="card-content">
+            <p>
+              Web design is a similar process of creation, with the intention of presenting the content on electronic
+              pages ...
+            </p>
+          </div>
+          <jps-icon-button icon="edit" offset="50" (click)="editService()"></jps-icon-button>
+          <jps-icon-button icon="delete" (click)="deleteService()"></jps-icon-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- WORKS -->
+<div class="section" id="portfolio-works">
+  <div class="container">
+    <div class="title-holder">
+      <h3>Creative Works</h3>
+      <span>Check out our latest works</span>
+      <jps-icon-button icon="add" (click)="addNewProject()"></jps-icon-button>
+    </div>
+    <div class="works-wrap">
+      <div class="works-category">
+        <div class="category-item" *ngFor="let item of category" (click)="curCategory = item"
+          [ngClass]="{'selected': curCategory === item}">
+          {{item}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 mb-4 work-cover-item" *ngFor="let item of works"
+          [hidden]="curCategory !=='All' && item.category !==curCategory">
+          <div class="work-item card p-0">
+            <div class="work-title">{{item.title}}</div>
+            <div class="work-img">
+              <div class="work-content" [ngStyle]="{'background-image': 'url('+item.imgUrl+')'}">
+                <!-- <img [src]="item.imgUrl" alt=""> -->
+              </div>
+            </div>
+            <div class="work-info">
+              <div><span class="label">Category: </span> {{item.category}}</div>
+              <div><span class="label">Published: </span> 2019.08.09</div>
+              <div><span class="label">Author: </span> {{item.author}}</div>
+            </div>
+            <jps-icon-button icon="edit" offset="50" (click)="editProject()"></jps-icon-button>
+            <jps-icon-button icon="delete" (click)="deleteProject()"></jps-icon-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CONTACT & FOOTER -->
+<div class="section" id="portfolio-contact">
+  <div class="container">
+    <div class="title-holder contact">
+      <h3>Contact Me</h3>
+      <span>Get in touch with me</span>
+    </div>
+    <div class="contact-wrap-all">
+      <div class="leftbox">
+        <div class="mini-title-holder contact">
+          <h4>Get in Touch</h4>
+        </div>
+        <div class="short-info-wrap">
+          <ul>
+            <li>
+              <p><label>Address:</label><span>123 Qwerty Avenue NYC, USA</span></p>
+            </li>
+            <li>
+              <p><label>Email:</label><span><a href="mailto:example@gmail.com">example@gmail.com</a></span></p>
+            </li>
+            <li>
+              <p><label>Phone:</label><span>+77 022 177 05 05</span></p>
+            </li>
+            <li>
+              <p><label>Website:</label><span><a href="mailto:example@gmail.com">www.yourdomain.com</a></span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rightbox">
+        <div class="contact-wrap">
+          <div class="main-input-wrap">
+            <form [formGroup]="form" name="form">
+              <div class="returnmessage" data-success="Your message has been received, We will contact you soon.">
+              </div>
+              <div class="empty-notice"><span>Please Fill Required Fields</span></div>
+              <div class="row">
+                <div class="col-6">
+
+                  <mat-form-field>
+                    <input matInput placeholder="Enter your name" formControlName="name" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-6">
+
+                  <mat-form-field>
+                    <input matInput placeholder="Enter your email" formControlName="email" required>
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                  </mat-form-field>
+                </div>
+              </div>
+              <mat-form-field>
+                <textarea matInput rows="6" placeholder="Enter your message" formControlName="message"
+                  required></textarea>
+              </mat-form-field>
+              <div class="button">
+                <div class="btn-animation"><span>Send Message</span></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<ng-container *ngIf="!curUser; else elseTemplate">
+  <a [routerLink]="[ '/auth/login' ]" class="menu-item" routerLinkActive="activeLink">Login</a>
+  <a [routerLink]="[ '/auth/register' ]" class="menu-item" routerLinkActive="activeLink">Register</a>
+</ng-container>
+<ng-template #elseTemplate>
+  <img [src]="curUser.avatar" alt="" [matMenuTriggerFor]="userMenu" class="user-avatar" />
+  <mat-menu #userMenu="matMenu" xPosition="before">
+    <div mat-menu-item>
+      <mat-icon>settings_applications</mat-icon>
+      <span>Profile</span>
+    </div>
+    <mat-divider></mat-divider>
+    <div (click)="logout()" mat-menu-item>
+      <mat-icon>power_settings_new</mat-icon>
+      <span>Logout</span>
+    </div>
+  </mat-menu>
+</ng-template>

@@ -1,0 +1,15 @@
+<mat-drawer-container class="portfolio-container">
+  <mat-drawer #drawer mode="side" opened>
+    <jps-pf-side-nav></jps-pf-side-nav>
+  </mat-drawer>
+
+  <mat-drawer-content class="portfolio-content">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- <div class="toggle-btn" (click)="drawer.toggle()">
+        <mat-icon>{{drawer.opened?"chevron_left":"chevron_right"}}</mat-icon>
+      </div> -->
+    <jps-pf-footer></jps-pf-footer>
+  </mat-drawer-content>
+</mat-drawer-container>

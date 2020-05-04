@@ -1,0 +1,108 @@
+@import '~@angular/material/theming';
+
+$mat-myapp-primary: (
+  50 : #e1e3e6,
+  100 : #b4b8c1,
+  200 : #828998,
+  300 : #4f596e,
+  400 : #2a364f,
+  500 : #041230,
+  600 : #03102b,
+  700 : #030d24,
+  800 : #020a1e,
+  900 : #010513,
+  A100 : #546aff,
+  A200 : #213eff,
+  A400 : #001fed,
+  A700 : #001cd4,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #ffffff,
+      A200 : #ffffff,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+$mat-myapp-warn: (
+  50 : #fcf1e6,
+  100 : #f7dbc0,
+  200 : #f1c396,
+  300 : #ebab6c,
+  400 : #e7994d,
+  500 : #e3872d,
+  600 : #e07f28,
+  700 : #dc7422,
+  800 : #d86a1c,
+  900 : #d05711,
+  A100 : #fffefe,
+  A200 : #ffdccb,
+  A400 : #ffba98,
+  A700 : #ffa97f,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-myapp-accent: (
+  50 : #f7e2e2,
+  100 : #ebb6b6,
+  200 : #de8586,
+  300 : #d15456,
+  400 : #c72f31,
+  500 : #bd0a0d,
+  600 : #b7090b,
+  700 : #ae0709,
+  800 : #a60507,
+  900 : #980303,
+  A100 : #ffc3c3,
+  A200 : #ff9090,
+  A400 : #ff5d5d,
+  A700 : #ff4444,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #ffffff,
+  )
+);
+
+$primary: mat-palette($mat-myapp-primary);
+$accent: mat-palette($mat-myapp-accent);
+$warn: mat-palette($mat-myapp-warn);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+

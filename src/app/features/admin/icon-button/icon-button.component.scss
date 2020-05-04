@@ -1,0 +1,21 @@
+.icon-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(7, 23, 55, 0.4);
+  border-radius: 4px;
+
+  transition: all 0.5s ease;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(7, 23, 55, 0.8);
+  }
+}

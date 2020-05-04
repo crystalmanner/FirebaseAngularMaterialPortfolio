@@ -1,0 +1,19 @@
+<mat-toolbar class="mat-elevation-z8 landing-header">
+  <mat-toolbar-row>
+    <div class="container d-flex justify-content-between">
+      <a [routerLink]="['/']" class="logo-text">
+        <img [src]="appInfo.logo" alt="" class="logo-img">
+        <span>JPerfect<br />Solution</span>
+      </a>
+      <div class="header-menu">
+        <a [routerLink]="[ '/admin/home' ]" class="menu-item" routerLinkActive="activeLink">Home</a>
+        <a [routerLink]="[ '/admin/projects' ]" class="menu-item" routerLinkActive="activeLink">Projects</a>
+        <a [routerLink]="[ '/admin/skills' ]" class="menu-item" routerLinkActive="activeLink">Skills</a>
+        <a [routerLink]="[ '/admin/members' ]" class="menu-item" routerLinkActive="activeLink">Members</a>
+        <a [routerLink]="[ '/admin/services' ]" class="menu-item mr-5" routerLinkActive="activeLink">Services</a>
+        <jps-user></jps-user>
+
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
